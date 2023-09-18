@@ -1,22 +1,29 @@
-import React from 'react'
+import React from "react";
 
-function Store({store}) {
-    return (
+function Store({ store, editMode, onDelete }) {
+  return (
     <tr>
-        <td className="row-name">
-            <span>NAME</span>
-        </td>
+      <td className="row-name">
+        <span>{store.name}</span>
+      </td>
+      <td>
+        <a href={store.image} target="_blank" rel="noopener noreferrer">
+          <b>&#8599;</b>
+        </a>
+      </td>
+      <td>
+        <span>{store.season}</span>
+      </td>
+      <td>
+        <span>{store.episode}</span>
+      </td>
+      {editMode && (
         <td>
-            <a href="" target="_blank"><b>&#8599;</b></a>
+          <button onClick={() => onDelete(store.id)}>Delete</button>
         </td>
-        <td>
-            <span>SEASON</span>
-        </td>
-        <td>
-            <span>EPISODE</span>
-        </td>
+      )}
     </tr>
-    );
+  );
 }
 
-export default Store
+export default Store;

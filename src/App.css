@@ -91,3 +91,16 @@ td {
      font-size: 2em;
      border-radius: 4px;
  }
+
+ .form-container {
+    display: flex;
+    align-items: center;  /* Vertically aligns the button with the form */
+    gap: 1rem;  /* Space between the form and the button */
+    /* move it down  */ 
+    margin-top: 1rem;
+}
+
+.form-container .edit-button {
+    /* Styles specific to the edit button go here */
+    margin-top: 1.02rem; /* If you want to push the button to the end of the container */
+}
